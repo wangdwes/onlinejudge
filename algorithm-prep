@@ -1,0 +1,34 @@
+The Importance of Algorithms 
+============================
+
+- definition review
+- runtime analysis: worst-base / average-case time complexity
+- sorting:
+  # bubblesort
+  # quicksort
+  # heapsort
+  # mergesort
+- shortest path:
+  # djikstra's algorithm
+- algorithms
+  # heuristic (approximate)
+  # random: e.g. quicksort, median
+- compression
+- importance of knowing algorithms
+- maximum flow: soviet union rail network
+- dynamic programming: sequence transformation
+
+How to Dissect a TopCoder Problem Statement
+===========================================
+
+- parts of a problem statement
+  # introduction,
+  # definition: solution skeleton,
+  # notes,
+  # constraints: on the input variables,
+  # sample.
+
+
+
+
+
