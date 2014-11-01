@@ -1,0 +1,12 @@
+
+public class Solution {
+	
+    public boolean isBalanced(TreeNode root) {
+        
+    }
+    
+    public int depth(TreeNode node) {
+    	
+    }
+    
+}

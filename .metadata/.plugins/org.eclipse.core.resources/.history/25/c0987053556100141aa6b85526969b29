@@ -1,0 +1,12 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Deque<Integer> stack = new ArrayDeque<Integer>();
+
+	}
+
+}

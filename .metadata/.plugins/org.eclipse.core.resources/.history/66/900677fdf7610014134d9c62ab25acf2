@@ -1,0 +1,20 @@
+
+public class Solution {
+
+	public int postorderIndex = 0;
+	public int inorderIndex = 0;
+	public int[] postorder_;
+	public int[] inorder_;
+	
+	public TreeNode construct(TreeNode bound) {
+		if (postorderIndex < 0) return null;
+		
+		TreeNode node = new TreeNode(postorder_[postorderIndex--]);
+		if (inorder_[inorderIndex] != node.val) node.right = construct(node);
+		inorderIndex--; if ((bound == null) || (inorder_[inorderIndex] != bound.val)) node.left = construct(bound);  
+			
+		
+		
+	}
+	
+}

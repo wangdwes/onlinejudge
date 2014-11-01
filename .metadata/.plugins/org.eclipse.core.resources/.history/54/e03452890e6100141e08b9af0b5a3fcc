@@ -1,0 +1,55 @@
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Solution {
+
+    public int ladderLength(String start, String end, Set<String> dict) {
+    	if (start == end) return 0;
+
+    	Set<String> seeds = new HashSet<String>();
+    	Set<String> interchange = new HashSet<String>();
+    	seeds.add(start); dict.add(end); int iterations = 0; 
+    	
+    	while (!seeds.isEmpty()) {
+    		interchange.clear();
+    		
+    		Iterator<String> seedIterator = seeds.iterator();
+    		while (seedIterator.hasNext()) {
+    			String seed = seedIterator.next();
+    			for (int pos = 0; pos < seed.length(); pos++) {
+    				for (char alt = 'a'; alt <= 'z'; alt++) {
+    					seed.substring(0, pos) + alt + seed.substring(pos + 1);
+    				}
+    			}
+    			
+    			Iterator<String> dictIterator = dict.iterator();
+    			while (dictIterator.hasNext()) {
+    				String diction = dictIterator.next();
+    				if (isNeighbor(seed, diction)) { 
+    					dictIterator.remove();
+    					interchange.add(diction); 
+    					if (diction == end) return iterations + 2; } }
+    			
+    			seedIterator.remove();
+    		}
+ 
+    		seeds.addAll(interchange); 
+    		iterations++;
+    		
+    	}
+
+    	if (seeds.contains(end)) return iterations + 1;
+    	else return 0;
+    }
+    
+    public boolean isNeighbor(String a, String b) {
+    	int discrepancy = 0; 
+    	for (int index = 0; index < a.length(); index++)
+    		if (a.charAt(index) != b.charAt(index)) {
+    			discrepancy++; if (discrepancy > 1) break; }
+    	return (discrepancy == 1);
+    }
+    
+	
+}

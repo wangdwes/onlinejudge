@@ -1,0 +1,15 @@
+
+public class Solution {
+	
+    public TreeNode sortedListToBST(ListNode head) {
+    	int count = 0; ListNode node = head; 
+    	while (node != null) { node = node.next; count++; }
+    	return generate(count);
+    }
+    
+    public TreeNode generate(int count) {
+    	if (count == 0) return null;
+    	
+    }
+    
+}

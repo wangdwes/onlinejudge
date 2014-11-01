@@ -1,0 +1,12 @@
+
+public class Solution {
+
+    public void flatten(TreeNode root) {
+    	
+    }
+    
+    public void preOrderTraversal(TreeNode node) {
+    	
+    }
+	
+}

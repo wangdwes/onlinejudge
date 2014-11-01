@@ -1,0 +1,20 @@
+
+public class Solution {
+	
+    public boolean isBalanced(TreeNode root) {
+        return (depth(root) >= 0);
+    }
+    
+    public int depth(TreeNode node) {
+    	if (node == null) return 0;
+    	int leftDepth = depth(node.left);
+    	int rightDepth = depth(node.right);
+    	
+    	System.out.print(leftDepth);
+    	System.out.println(rightDepth);
+    	
+    	if (leftDepth < 0 || rightDepth < 0) return -1;
+    	if (Math.abs(leftDepth - rightDepth) > 1) return -1;
+    	else return Math.max(leftDepth, rightDepth) + 1;    	
+    }
+}

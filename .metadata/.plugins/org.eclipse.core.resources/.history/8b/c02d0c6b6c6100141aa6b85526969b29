@@ -1,0 +1,16 @@
+
+public class Solution {
+	
+    public boolean isBalanced(TreeNode root) {
+        
+    }
+    
+    public int depth(TreeNode node) {
+    	
+    	int leftDepth = depth(node.left);
+    	int rightDepth = depth(node.right);
+    	
+    }
+	
+
+}

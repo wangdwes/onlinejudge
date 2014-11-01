@@ -1,0 +1,17 @@
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ListNode ln0 = new ListNode(0);
+		
+	}
+
+
+public class ListNode {
+	int val;
+	ListNode next;
+	ListNode(int x) { val = x; next = null; }
+}	
+	
+}

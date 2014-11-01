@@ -1,0 +1,23 @@
+
+public class Solution {
+
+	public int desiredSum;
+	public List<List<Integer>> paths;
+	
+    public boolean hasPathSum(TreeNode root, int sum) {
+    	desiredSum = sum; paths = new ArrayList<List<Integer>>();
+    	return depthFirstSearch(root, 0);
+    }
+    
+    public boolean depthFirstSearch(TreeNode node, int subsum) {
+    	if (node == null) return false;
+    	
+    	subsum += node.val;
+    	if (depthFirstSearch(node.left, subsum)) return true;
+    	if (depthFirstSearch(node.right, subsum)) return true;
+    	if (subsum == desiredSum && node.left == null && node.right == null)
+    		return true; else return false;
+    }
+	
+	
+}

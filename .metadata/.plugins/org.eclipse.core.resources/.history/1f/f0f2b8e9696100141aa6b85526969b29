@@ -1,0 +1,13 @@
+
+public class Solution {
+	
+    public boolean isBalanced(TreeNode root) {
+        
+    }
+    
+    public int depth(TreeNode node) {
+    	if (node == null) return 
+    	maxDepth = Math.max(depth(node.left), depth(node.right));
+    }
+    
+}

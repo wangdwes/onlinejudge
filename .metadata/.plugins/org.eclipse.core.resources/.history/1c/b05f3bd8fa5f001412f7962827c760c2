@@ -1,0 +1,11 @@
+
+public class Solution {
+	public boolean isPalindrome(String s) {
+		int head = 0, tail = s.length();
+		while (head != tail) 
+			while (!Character.isLetterOrDigit(s.charAt(head))) head++;
+			while (!Character.isLetterOrDigit(s.charAt(tail))) tail--;
+		}
+		
+	}
+}

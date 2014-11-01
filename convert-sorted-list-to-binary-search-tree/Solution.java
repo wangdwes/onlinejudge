@@ -1,0 +1,21 @@
+
+public class Solution {
+	
+	public ListNode head_;
+	
+    public TreeNode sortedListToBST(ListNode head) {
+    	int count = 0; ListNode node = head; head_ = head; 
+    	while (node != null) { node = node.next; count++; }
+    	return generate(count);
+    }
+    
+    public TreeNode generate(int count) {
+    	if (count == 0) return null;
+    	TreeNode node = new TreeNode(count);
+    	node.left = generate(count / 2);
+    	node.val = head_.val; head_ = head_.next;
+    	node.right = generate(count - 1 - count / 2);
+    	return node;
+    }
+    
+}

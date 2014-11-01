@@ -1,0 +1,26 @@
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Solution sol = new Solution();
+		
+		String start = "hit";
+		String end = "hot";
+		Set<String> dict = new HashSet<String>();
+		
+		dict.add("hot");
+		dict.add("dot");
+		dict.add("dog");
+		dict.add("lot");
+		dict.add("log");
+		
+		System.out.println(sol.ladderLength(start, end, dict));
+		
+	}
+
+}

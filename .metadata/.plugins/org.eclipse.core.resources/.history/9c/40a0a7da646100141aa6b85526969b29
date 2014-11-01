@@ -1,0 +1,19 @@
+
+public class Solution {
+
+	public int minimumDepth = Integer.MAX_VALUE;
+	
+    public int minDepth(TreeNode root) {
+    	dfs(root, 0); 
+    	if (root == null) return 0; 
+    	else return minimumDepth + 1;
+    }	
+    
+    public void dfs(TreeNode node, int depth) {
+    	if (node == null) return;
+    	dfs(node.left, depth + 1);
+    	dfs(node.right, depth + 1);
+    	if (minimumDepth > depth && node.left == null && node.right == null)
+    		minimumDepth = depth;
+    }
+}

@@ -1,0 +1,22 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Solution {
+	
+	public Deque<Integer> stack = new ArrayDeque<Integer>();
+	
+    public void connect(TreeLinkNode root) {
+		    	
+    }
+    
+    public void postOrderTraversal(TreeLinkNode node) {
+    	if (node == null) return;
+    	
+    	
+    	postOrderTraversal(node.right);
+    	stack.push(node.right.val);
+    	postOrderTraversal(node.left);
+    	stack.push(node.left.val);
+    }
+    
+}

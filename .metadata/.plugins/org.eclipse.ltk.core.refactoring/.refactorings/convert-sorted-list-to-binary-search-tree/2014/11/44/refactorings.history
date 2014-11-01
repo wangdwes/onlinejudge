@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;convert-sorted-array-binary-search-tree&apos;&#x0A;- Original project: &apos;convert-sorted-list-to-binary-search-tree&apos;&#x0A;- Destination element: &apos;convert-sorted-array-binary-search-tree&apos;&#x0A;- Original elements:&#x0A;     ListNode.java&#x0A;     TreeNode.java&#x0A;     Solution.java&#x0A;     Launcher.java" description="Copy compilation units" destination="=convert-sorted-array-binary-search-tree" element1="/&lt;{ListNode.java" element2="/&lt;{TreeNode.java" element3="/&lt;{Solution.java" element4="/&lt;{Launcher.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1414860177542" units="4" version="1.0"/>
+</session>

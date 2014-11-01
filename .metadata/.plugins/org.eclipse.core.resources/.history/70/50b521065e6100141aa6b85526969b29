@@ -1,0 +1,20 @@
+
+public class Solution {
+
+    public void flatten(TreeNode root) {
+    	
+    }
+    
+    public void preOrderTraversal(TreeNode node) {
+    	if (node == null) return;
+    	preOrderTraversal(node.left);
+    	preOrderTraversal(node.right);
+    	
+    	if (node.left != null) {
+    		node.left.right = node.right;
+    	}
+    	
+    	
+    }
+	
+}

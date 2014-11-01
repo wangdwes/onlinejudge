@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+	
+	public List<List<Integer>> traversal = new ArrayList<List<Integer>>();
+	
+    public List<List<Integer>> levelOrder(TreeNode root) {
+    	
+    }
+    
+    public void dfs(TreeNode node) {
+    	if (node == null) return;
+    	dfs(node.left);
+    	dfs(node.right);
+    	
+    	
+    }
+    
+}

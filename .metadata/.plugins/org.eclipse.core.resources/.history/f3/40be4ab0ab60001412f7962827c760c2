@@ -1,0 +1,26 @@
+
+public class Solution {
+	public int minCut(String s) {
+		
+		int[] cuts = new int[s.length() + 1];
+		
+		for (int position = 0; position < s.length(); position++) {
+			int min = Integer.MAX_VALUE;
+			for (int subpos = 0; subpos <= position; subpos++) {
+				if (subpos != 0 && cuts[subpos] == 0) continue;
+				if (cuts[subpos] + 1 >= min) continue;
+				
+				boolean isPalindrome = true; 
+				for (int trial = subpos; trial <= (position + subpos) / 2; trial++)
+					if (s.charAt(trial) != s.charAt(position - trial + subpos)) {
+						isPalindrome = false; break; }
+				
+				if (isPalindrome && cuts[subpos] + 1 < min) 
+					min = cuts[subpos] + 1;
+			}
+			cuts[position + 1] = min;
+		}
+		
+		return cuts[s.length()] - 1;
+	}
+}

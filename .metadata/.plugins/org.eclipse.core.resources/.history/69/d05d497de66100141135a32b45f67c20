@@ -1,0 +1,21 @@
+
+public class Solution {
+		
+	public int[] num_;
+	public int ptr = 0;
+	
+	public TreeNode sortedArrayToBST(int[] num) {
+		num_ = num;
+		return generate(num.length);
+    }
+    
+    public TreeNode generate(int count) {
+    	if (count == 0) return null;
+    	TreeNode node = new TreeNode(count);
+    	node.left = generate(count / 2);
+    	node.val = 
+    	node.right = generate(count - 1 - count / 2);
+    	return node;
+    }
+    
+}

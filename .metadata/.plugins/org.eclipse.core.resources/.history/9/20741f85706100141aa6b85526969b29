@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+	
+	public List<List<Integer>> traversal = new ArrayList<List<Integer>>();
+	
+    public List<List<Integer>> levelOrder(TreeNode root) {
+    	dfs(root, 0); 
+    	
+    	List<List<Integer>> inverse = new ArrayList<List<Integer>>();
+    	Iterator<List<Integer>> traversalIterator = traversal.iterator();
+    }
+    
+    public void dfs(TreeNode node, int depth) {
+    	if (node == null) return;
+    	
+    	List<Integer> level = null;
+    	if (depth > traversal.size() - 1) {
+    		level = new ArrayList<Integer>();
+    		traversal.add(level); }
+    	else level = traversal.get(depth);
+    	
+    	level.add(node.val);
+    	dfs(node.left, depth + 1);
+    	dfs(node.right, depth + 1);
+    }
+    
+}

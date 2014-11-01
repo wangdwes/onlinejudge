@@ -1,0 +1,24 @@
+
+public class Solution {
+
+	public int desiredSum;
+	
+    public boolean hasPathSum(TreeNode root, int sum) {
+    	desiredSum = sum;
+    	return depthFirstSearch(root, 0);
+    }
+    
+    public boolean depthFirstSearch(TreeNode node, int subsum) {
+    	if (node == null) return false;
+    	
+    	subsum += node.val
+    	depthFirstSearch(node.left, subsum);
+    	depthFirstSearch(node.right, subsum);
+    	
+    	
+    	
+    	
+    }
+	
+	
+}

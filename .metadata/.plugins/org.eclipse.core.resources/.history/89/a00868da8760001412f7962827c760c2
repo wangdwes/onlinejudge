@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+	
+	public List<List<String>> partition(String s) {
+	
+		List<List<String>> partitions = new ArrayList<List<String>>();
+		List<Integer> lengths = new ArrayList<Integer>();
+		
+		for (int position = 0; position < s.length(); position++)
+			for (int index = 0; index < partitions.size(); index++) {
+				
+				boolean isPalindrome = true;
+				int length = lengths.get(index);
+				
+				for (int subpos = length; subpos <= position; subpos++)
+					if (s.charAt(subpos) != s.charAt(position - subpos + length)) {
+						isPalindrome = false; break; }
+				
+				if (isPalindrome) { 
+					List<String> subpartition = partitions.get(index);
+					subpartition.add(s.substring(length, position));
+				}
+				
+				
+				Integer length = lengths.get(index);
+				if (length == position - 1) {
+					List<String> subpartition = partitions.get(index);
+					subpartition.add(s.substring(position, position));
+					partitions.add(index, subpartition);
+					lengths.add(index, length + 1);
+				} else {
+					boolean isPalindrome = true;
+					for (int subposition = length; subposition <= position; subposition++)
+						if (s.charAt(subposition) != s.charAt(position - subposition + length)) {
+							isPalindrome = false; break; }
+					if (isPalindrome) {
+						List<String> subpartition = partitions.get(index);
+						subpartition.add(s.substring(length, endIndex))
+					}
+				}
+				
+				else {
+					
+					for (int subposition = lengths.get(index); subposition <= position; subposition++) {
+						if (s.charAt(subposition) != s.charAt(subposition - accumulativeL))
+						
+					}
+					
+					
+				}
+				
+			}
+		
+		return partitions;
+	}
+	
+	public boolean isPalindromse(String s) {
+		for (int index = 0; index < s.length(); index++)
+			if (s.charAt(index) != s.charAt(s.length() - 1 - index)) return false;
+		return true;
+	}
+}

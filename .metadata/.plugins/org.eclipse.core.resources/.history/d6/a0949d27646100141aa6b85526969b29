@@ -1,0 +1,13 @@
+
+public class Solution {
+
+    public int minDepth(TreeNode root) {
+	        
+    }	
+    
+    public void dfs(TreeNode node, int depth) {
+    	if (node == null) return;
+    	dfs(node.left, depth + 1);
+    	dfs(node.right, depth + 1);
+    }
+}

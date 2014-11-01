@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+	
+	public List<List<String>> partition(String s) {
+	
+		List<List<String>> partitions = new ArrayList<List<String>>();
+		List<Integer> lengths = new ArrayList<Integer>();
+		
+		partitions.add(new ArrayList<String>()); lengths.add(0);
+		
+		for (int position = 0; position < s.length(); position++) {		
+			for (int index = 0; index < partitions.size(); index++) {
+				
+				boolean isPalindrome = true;
+				int length = lengths.get(index);
+				
+				for (int subpos = length; subpos <= position - (length / 2); subpos++)
+					if (s.charAt(subpos) != s.charAt(position - subpos + length)) {
+						isPalindrome = false; break; }
+				
+				if (isPalindrome) { 
+					List<String> subpartition = new ArrayList<String>(partitions.get(index));
+					subpartition.add(s.substring(length, position + 1));
+					partitions.add(index, subpartition);
+					lengths.add(index, position + 1); index++; 
+				}
+			}
+		}
+		
+		for (int index = 0; index < partitions.size(); index++) {
+			if (lengths.get(index) != s.length()) partitions.remove(index);
+		}
+		
+		return partitions;
+	}
+
+}

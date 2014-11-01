@@ -1,0 +1,83 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Solution {
+
+	public List<List<String>> findLadders(String start, String end, Set<String> dict) {
+		
+		List<List<String>> ladders = new ArrayList<List<String>>(); 
+		Map<String, List<String>> adjacents = new HashMap<String, List<String>>();
+		List<String> seed = new ArrayList<String>(); seed.add(start); ladders.add(seed);
+		Set<String> reached = new HashSet<String>();
+		
+		while (!ladders.isEmpty()) {
+			reached.clear();
+			
+			Iterator<List<String>> ladderIterator = ladders.iterator();
+			while (ladderIterator.hasNext()) {
+				List<String> ladder = ladderIterator.next();
+				String leaf = ladder.get(ladder.size() - 1);
+				if (!adjacents.containsKey(leaf)) {
+					adjacents.put(leaf, new ArrayList<String>());
+					for (int position = 0; position < leaf.length(); position++)
+						for (char substitute = 'a'; substitute <= 'z'; substitute++) {
+							String token = leaf.substring(0, position) + substitute + leaf.substring(position + 1);
+							if (dict.contains(token)) { adjacents.get(leaf).add(token); reached.add(token); } }
+				} // end if
+				
+				Iterator<String> tokenIterator = adjacents.get(leaf).iterator();
+				while (tokenIterator.hasNext()) {
+					List<String> newLadder = new ArrayList<String>(ladder);
+					newLadder.add(tokenIterator.next()); ladders.add(newLadder); }
+				ladderIterator.remove();
+			}
+			
+			dict.removeAll(reached);
+		}
+			
+    	List<List<String>> ladders = new ArrayList<List<String>>();
+    	List<List<String>> interchange = new ArrayList<List<String>>();
+    	dict.add(end); int iterations = 0; boolean bingo = false; 
+
+    	Set<String> reachable = new HashSet<String>();
+    	List<String> initial = new ArrayList<String>();
+    	initial.add(start); ladders.add(initial);
+    	
+    	while (!ladders.isEmpty() && !bingo) {
+    		interchange.clear();
+    		
+    		Iterator<List<String>> ladderIterator = ladders.iterator();
+    		while (ladderIterator.hasNext()) {
+    			List<String> ladder = ladderIterator.next(); reachable.clear();
+    			String tail = ladder.get(ladder.size() - 1);
+    			for (int pos = 0; pos < tail.length(); pos++)
+    				for (char alt = 'a'; alt <= 'z'; alt++) {
+    					String assembly = tail.substring(0, pos) + alt + tail.substring(pos + 1);
+    					if (dict.contains(assembly)) {
+//    						List<String> extendedLadder = new ArrayList<String>(ladder);
+  //  						extendedLadder.add(assembly);
+    //						interchange.add(extendedLadder); 
+    						reachable.add(assembly); 
+    						if (assembly.equals(end)) bingo = true;  
+    					} }
+    			ladderIterator.remove();
+    		}
+    		ladders.addAll(interchange); dict.removeAll(reachable);
+    		iterations++;
+    	}
+
+    	Iterator<List<String>> ladderIterator = ladders.iterator();
+    	while (ladderIterator.hasNext()) {
+    		List<String> ladder = ladderIterator.next();
+    		if (!ladder.get(ladder.size() - 1).equals(end)) ladderIterator.remove();
+    	}
+    	
+    	return ladders;
+    }    	
+    */
+}

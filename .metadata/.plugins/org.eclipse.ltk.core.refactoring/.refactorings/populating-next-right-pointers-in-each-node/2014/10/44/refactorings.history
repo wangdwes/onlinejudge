@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TreeLinkNode.java&apos; to &apos;Solution.java&apos;&#x0A;- Original project: &apos;populating-next-right-pointers-in-each-node&apos;&#x0A;- Destination element: &apos;Solution.java&apos;&#x0A;- Original element: &apos;TreeLinkNode.java&apos;" description="Copy compilation unit" destination="=populating-next-right-pointers-in-each-node-ii/&lt;{Solution.java" element1="/&lt;{TreeLinkNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1414799714601" units="1" version="1.0"/>
+</session>

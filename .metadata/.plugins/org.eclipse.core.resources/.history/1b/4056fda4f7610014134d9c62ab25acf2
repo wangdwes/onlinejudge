@@ -1,0 +1,17 @@
+
+public class Solution {
+
+	public int postOrderIndex = 0;
+	public int inOrderIndex = 0;
+	
+	public int[] postorder_;
+	public int[] inorder_;
+	
+	public TreeNode construct(TreeNode bound) {
+		if (postOrderIndex < 0) return null;
+		
+		TreeNode node = new TreeNode(postorder)
+		
+	}
+	
+}

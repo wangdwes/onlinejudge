@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+
+	public int desiredSum;
+	public List<List<Integer>> paths;
+	
+	public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    	desiredSum = sum; paths = new ArrayList<List<Integer>>();
+    	depthFirstSearch(root, new ArrayList<Integer>(), 0); return paths;
+    }
+
+	public void depthFirstSearch(TreeNode node, List<Integer> path, int subsum) {
+    	if (node == null) return;
+    	
+    	subsum += node.val; path.add(node.val);
+    	depthFirstSearch(node.left, path, subsum);
+    	depthFirstSearch(node.right, path, subsum);
+    	if (subsum == desiredSum && node.left == null && node.right == null)
+    		
+    	
+    	if (subsum == desiredSum && node.left == null && node.right == null)
+    		return true; else return false;
+    }
+	
+	
+}

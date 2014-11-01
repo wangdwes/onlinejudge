@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Solution {
+
+	public List<List<String>> findLadders(String start, String end, Set<String> dict) {
+		
+		List<List<String>> ladders = new ArrayList<List<String>>(); 
+		List<List<String>> exchange = new ArrayList<List<String>>();
+		
+		Map<String, List<String>> adjacents = new HashMap<String, List<String>>();
+		Set<String> reached = new HashSet<String>(); dict.add(end);
+		List<String> seed = new ArrayList<String>(); seed.add(start); ladders.add(seed);
+		
+		while (!ladders.isEmpty()) {
+			reached.clear(); exchange.clear();
+			
+			Iterator<List<String>> ladderIterator = ladders.iterator();
+			while (ladderIterator.hasNext()) {
+				List<String> ladder = ladderIterator.next();
+				String leaf = ladder.get(ladder.size() - 1);
+				if (!adjacents.containsKey(leaf)) {
+					adjacents.put(leaf, new ArrayList<String>());
+					for (int position = 0; position < leaf.length(); position++)
+						for (char substitute = 'a'; substitute <= 'z'; substitute++) {
+							String token = leaf.substring(0, position) + substitute + leaf.substring(position + 1);
+							if (dict.contains(token)) { adjacents.get(leaf).add(token); reached.add(token); } }
+				} // end if
+
+				Iterator<String> tokenIterator = adjacents.get(leaf).iterator();
+				while (tokenIterator.hasNext()) {
+					List<String> newLadder = new ArrayList<String>(ladder);
+					newLadder.add(tokenIterator.next()); exchange.add(newLadder); }
+				ladderIterator.remove();				
+			}
+			
+		
+			ladders.addAll(exchange);
+			dict.removeAll(reached);
+		}
+			    	
+    	return ladders;
+    }    	
+}

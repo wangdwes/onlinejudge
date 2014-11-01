@@ -1,0 +1,17 @@
+
+public class Solution {
+
+	public int desiredSum;
+	
+    public boolean hasPathSum(TreeNode root, int sum) {
+    	desiredSum = sum;
+    	depthFirstSearch(root);
+    }
+    
+    public boolean depthFirstSearch(TreeNode node) {
+    	if (node == null) return false; 
+    	
+    }
+	
+	
+}

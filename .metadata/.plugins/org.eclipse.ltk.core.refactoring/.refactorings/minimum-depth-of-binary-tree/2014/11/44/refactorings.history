@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;maximum-depth-of-binary-tree&apos;&#x0A;- Original project: &apos;minimum-depth-of-binary-tree&apos;&#x0A;- Destination element: &apos;maximum-depth-of-binary-tree&apos;&#x0A;- Original elements:&#x0A;     Launcher.java&#x0A;     Solution.java&#x0A;     TreeNode.java" description="Copy compilation units" destination="=maximum-depth-of-binary-tree" element1="/&lt;{Launcher.java" element2="/&lt;{Solution.java" element3="/&lt;{TreeNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1414804641645" units="3" version="1.0"/>
+</session>

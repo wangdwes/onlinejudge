@@ -1,0 +1,26 @@
+
+public class Solution {
+
+    public void flatten(TreeNode root) {
+    	
+    }
+    
+    public void preOrderTraversal(TreeNode node) {
+    	if (node == null) return;
+    	preOrderTraversal(node.left);
+    	preOrderTraversal(node.right);
+    	
+    	if (node.left != null) {
+    		TreeNode leaf = node.left;
+    		node.left = null;      		
+    		while (leaf.right != null)
+    			leaf = leaf.right;
+    		
+    		leaf.right = node.right;
+    		node.right = leaf;
+    	}
+    	
+    	
+    }
+	
+}
