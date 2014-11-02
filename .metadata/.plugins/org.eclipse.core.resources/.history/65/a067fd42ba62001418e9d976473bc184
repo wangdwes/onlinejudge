@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+
+	/* 
+	 * A   B  
+	 *  \ /
+	 *   X
+	 *  / \
+	 * C   D
+	 * 
+	 * B, D
+	 * 
+	 * 
+	 * 
+	 */
+
+    public List<TreeNode> generateTrees(int n) {
+    	List<TreeNode> trees = new ArrayList<TreeNode>();
+    }	
+	
+	
+}

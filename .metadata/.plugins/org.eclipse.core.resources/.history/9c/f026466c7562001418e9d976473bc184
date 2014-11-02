@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+
+	// 1 2 3 4 5 6 7 8 9
+	// 1 2 3 5 4 6 7 8 9: 5,4;
+	// 1 2 6 4 5 3 7 8 9: 6,4;5,3;
+
+	public List<Integer> retval = new ArrayList<Integer>();
+	
+    public List<Integer> inorderTraversal(TreeNode root) {
+        if (root == null) return null;
+        if (!isValidBST(root.left)) return false;
+        if (previous != null && root.val <= previous.val) return false;
+        previous = root;
+        if (!isValidBST(root.right)) return false;
+        return true; 
+    }
+    
+}

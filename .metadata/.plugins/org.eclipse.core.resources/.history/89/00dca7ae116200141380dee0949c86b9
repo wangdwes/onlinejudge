@@ -1,0 +1,12 @@
+
+public class Solution {
+
+	public int validate(TreeNode node, boolean isMaximum) {
+		
+	}
+	
+	public boolean isValidBST(TreeNode root) {
+        
+    }
+    
+}

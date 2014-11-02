@@ -1,0 +1,17 @@
+
+public class Solution {
+
+	/* 
+	 * A   B  
+	 *  \ /
+	 *   X
+	 *  / \
+	 * C   D
+	 * 
+	 * B, D
+	 * 
+	 * 
+	 * 
+	 */
+	
+}

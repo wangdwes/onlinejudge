@@ -1,0 +1,17 @@
+
+public class Solution {
+
+	// abac
+	// ab
+	// ac
+	
+    public boolean isInterleave(String s1, String s2, String s3) {
+    	int[][] lengths = new int[s1.length()][s2.length()];
+    	for (int s1pos = 0; s1pos < s1.length(); s1pos++) {
+    		for (int s2pos = 0; s2pos < s2.length(); s2pos++) {
+    			s3.substring(s1pos, s2pos);
+    		}
+    	}
+    }
+}
+

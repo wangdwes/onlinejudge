@@ -1,0 +1,16 @@
+
+public class Solution {
+
+
+	public int recover(TreeNode node, boolean minNeeded) {
+		
+		int min = recover(node.left, true);
+		int max = recover(node.right, false);
+		
+	}
+	
+    public void recoverTree(TreeNode root) {
+        
+    }
+    
+}

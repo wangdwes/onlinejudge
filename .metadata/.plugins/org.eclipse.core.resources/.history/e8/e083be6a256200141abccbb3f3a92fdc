@@ -1,0 +1,38 @@
+
+public class Solution {
+
+	public class Extremes {
+		TreeNode min, max; 
+	}
+
+	public Extremes recover(TreeNode node) {
+		if (node == null) return null;
+		
+		TreeNode leftExt = 
+		
+		
+	}
+	
+	public TreeNode recover(TreeNode node, boolean minNeeded) {
+		if (node == null) return null;
+		
+		TreeNode leftMax = recover(node.left, false);
+		TreeNode rightMin = recover(node.right, true);
+		
+		if (leftMax != null && rightMin != null && leftMax.val > node.val && rightMin.val < node.val) 
+			; // swap leftMax and rightMin; 
+		else if (leftMax != null && leftMax.val > node.val) 
+			; // swap leftMax and node;
+		else if (rightMin != null && rightMin.val < node.val)
+			; // swap rightMax and node;
+		
+		if (minNeeded) { 
+			
+		}
+	}
+	
+    public void recoverTree(TreeNode root) {
+        
+    }
+    
+}

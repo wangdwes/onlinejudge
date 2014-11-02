@@ -1,0 +1,10 @@
+
+public class Solution {
+
+	public int validate(TreeNode node, )
+	
+	public boolean isValidBST(TreeNode root) {
+        
+    }
+    
+}

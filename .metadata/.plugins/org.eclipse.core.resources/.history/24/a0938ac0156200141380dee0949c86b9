@@ -1,0 +1,24 @@
+
+public class Solution {
+
+
+	public TreeNode recover(TreeNode node, boolean minNeeded) {
+		if (node == null) return null;
+		
+		TreeNode leftMax = recover(node.left, false);
+		TreeNode rightMin = recover(node.right, true);
+		
+		if (leftMax != null && rightMin != null &&  )
+			
+			
+		
+		if (minNode != null && maxNode != null && minNode.val > node.val && maxNode.val) 
+		
+		
+	}
+	
+    public void recoverTree(TreeNode root) {
+        
+    }
+    
+}

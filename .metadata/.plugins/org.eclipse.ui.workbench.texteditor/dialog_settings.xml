@@ -13,17 +13,19 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="max" key="selection"/>
+		<item value="TreeNode" key="selection"/>
 		<list key="findhistory">
-			<item value="min"/>
 			<item value="TreeLinkNode"/>
+			<item value="postorder"/>
+			<item value="min"/>
 			<item value="seed"/>
 			<item value="bb"/>
 			<item value="accumulativeLength"/>
 		</list>
 		<list key="replacehistory">
-			<item value="max"/>
 			<item value="TreeNode"/>
+			<item value="preorder"/>
+			<item value="max"/>
 			<item value="lengths"/>
 		</list>
 	</section>
