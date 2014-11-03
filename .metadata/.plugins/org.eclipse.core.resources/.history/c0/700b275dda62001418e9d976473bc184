@@ -1,0 +1,13 @@
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		
+		int[] A = new int[]{3, 4, -1, 1};
+		
+		Solution sol = new Solution();
+		System.out.println(sol.firstMissingPositive(A));
+		
+	}
+	
+}

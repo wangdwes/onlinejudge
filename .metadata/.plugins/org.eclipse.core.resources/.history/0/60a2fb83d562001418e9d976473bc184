@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Solution {
+
+	public List<List<Integer>> combinations;
+	
+    public List<List<Integer>> combine(int n, int k) {
+    	combinations = new ArrayList<List<Integer>>();
+    }
+    
+    public void dfs()
+	
+}

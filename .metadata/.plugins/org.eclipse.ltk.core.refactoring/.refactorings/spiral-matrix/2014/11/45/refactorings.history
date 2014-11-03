@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;spiral-matrix-ii&apos;&#x0A;- Original project: &apos;spiral-matrix&apos;&#x0A;- Destination element: &apos;spiral-matrix-ii&apos;&#x0A;- Original elements:&#x0A;     Solution.java&#x0A;     Launcher.java" description="Copy compilation units" destination="=spiral-matrix-ii" element1="/&lt;{Solution.java" element2="/&lt;{Launcher.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1414983709914" units="2" version="1.0"/>
+</session>

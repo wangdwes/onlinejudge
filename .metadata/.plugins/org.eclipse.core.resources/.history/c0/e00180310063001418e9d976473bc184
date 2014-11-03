@@ -1,0 +1,18 @@
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] a = new int[]{5,0,0,0,0,0,0,0,0,0};
+		int[] b = new int[]{1,2,3,4,5};
+		
+		Solution sol = new Solution();
+		sol.merge(a, 1, b, 5);
+		
+		for (int index = 0; index < a.length; index++)
+			System.out.println(a[index]);
+		
+	}
+
+}

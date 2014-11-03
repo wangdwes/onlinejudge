@@ -1,0 +1,10 @@
+
+public class Solution {
+
+    public int climbStairs(int n) {
+    	int[] ways = new int[n];
+    }
+	
+	
+	
+}

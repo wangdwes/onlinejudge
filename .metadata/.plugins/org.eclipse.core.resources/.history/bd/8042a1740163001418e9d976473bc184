@@ -1,0 +1,9 @@
+
+public class Solution {
+    public int[] plusOne(int[] digits) {
+    	for (int index = digits.length - 1, carry = 0; index >= 0; index++) {
+    		
+    	}
+        
+    }
+}

@@ -1,0 +1,15 @@
+
+public class Solution {
+
+    public int climbStairs(int n) {
+    	int[] ways = new int[n]; 
+    	for (int stair = 0; stair < n; stair++) {
+    		if (stair >= 1) ways[stair] += ways[stair - 1] + 1;
+    		if (stair >= 2) ways[stair] += ways[stair - 2] + 1;
+    	}
+    	return stairs[n - 1];
+    }
+	
+	
+	
+}

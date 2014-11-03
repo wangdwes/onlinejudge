@@ -1,0 +1,17 @@
+
+public class Solution {
+
+    public int climbStairs(int n) {
+    	int first = 1, second = 2, temporary;
+    	for (int stair = 0; stair < n; stair++) {
+    		
+    	}
+    	
+    	for (int stair = 2; stair < n; stair++)
+    		if (stair >= 1) ways[stair] += ways[stair - 1];
+    		if (stair)
+    	
+    		ways[stair] = ways[stair - 1] + ways[stair - 2]; 
+    	return ways[n - 1];
+    }
+}

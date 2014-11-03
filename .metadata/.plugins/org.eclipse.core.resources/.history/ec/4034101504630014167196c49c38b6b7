@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+    	
+    	List<Integer> spiral = new ArrayList<Integer>();
+    	int m = matrix.length, n = matrix[0].length;
+    	int state = 0, count = 0, wall = 0, x = 0, y = 0; 
+    	
+    	while (count < m * n) {
+    		spiral.add(matrix[x][y]);
+    		if (state == 0) {if (x < m - wall) x++; else state = 1; } 
+    		if (state == 1) {if (y < n - wall) y++; else state = 2; } 
+    		if (state == 2) {if (x > wall) x--; else state = 3; }
+    		if (state == 3) {if (y > wall) y--; else state = 0; }
+    	}
+    		
+    	}
+    	
+    	return null;
+    }
+}

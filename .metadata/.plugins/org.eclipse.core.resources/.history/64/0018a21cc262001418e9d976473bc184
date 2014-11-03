@@ -1,0 +1,16 @@
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		
+		int[] numbers = new int[]{2, 2};
+		Solution sol = new Solution();
+		int[] retval = sol.twoSum(numbers, 9);
+		
+		System.out.println(retval[0]);
+		System.out.println(retval[1]);
+		
+		
+	}
+	
+}

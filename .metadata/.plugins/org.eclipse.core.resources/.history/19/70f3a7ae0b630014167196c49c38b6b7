@@ -1,0 +1,11 @@
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		
+		Solution sol = new Solution();
+		System.out.println(sol.sqrt(0));
+		
+	}
+	
+}

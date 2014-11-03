@@ -1,0 +1,15 @@
+
+public class Solution {
+
+    public int climbStairs(int n) {
+    	int[] ways = new int[n]; 
+    	for (int stair = 0; stair < n; stair++) {
+    		
+    		
+    		ways[stair - 1]
+    	}
+    }
+	
+	
+	
+}

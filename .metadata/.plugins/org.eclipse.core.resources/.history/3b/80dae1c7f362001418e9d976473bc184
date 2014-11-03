@@ -1,0 +1,30 @@
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Solution {
+	
+    public List<Interval> merge(List<Interval> intervals) {
+         
+    	Collections.sort(intervals, new Comparator<Interval>() {
+    		@Override
+    		public int compare(Interval a, Interval b) {
+    			if (a.start != b.start) return a.start - b.start;
+    			else return a.end - b.end; }});
+
+    	Interval proposed = new Interval();
+    	for (int index = 1; index < intervals.size(); index++) {
+    		Interval interval = intervals.get(index), previousInterval = intervals.get(index - 1);
+    		proposed.start = Math.min(interval.start, previousInterval.start);
+    		proposed.end = Math.max(interval.end, previousInterval.end);
+    		if ( (proposed.end - proposed.start) <= (interval.end - interval.start)
+    				+ (previousInterval.end - previousInterval.start) ) {
+    			previousInterval.start = proposed.start; previousInterval.end = proposed.end;
+    			intervals.remove(index--); }
+    	}
+    	
+    	return intervals;
+    	
+    }
+	
+}

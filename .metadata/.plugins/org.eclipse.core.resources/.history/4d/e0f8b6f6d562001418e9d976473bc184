@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Solution {
+
+	public int n_, k_;
+	public List<List<Integer>> combinations;
+	
+    public List<List<Integer>> combine(int n, int k) {
+    	combinations = new ArrayList<List<Integer>>(); n_ = n; k_ = k;
+    }
+    
+    public void dfs(int depth, List<Integer> combination) {
+    	if (depth == k_) combinations.add(new ArrayList<Integer>(combination));
+    	else {
+   			for (int index = combination.isEmpty()? 0: combination.get(combination.size() - 1); index < n; index++) {
+   				
+   			}
+    	}
+
+    }
+	
+}

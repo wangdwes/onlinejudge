@@ -1,0 +1,16 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class Solution {
+	
+    public int[] twoSum(int[] numbers, int target) {
+    	Map<Integer, Integer> remainders = new HashMap<Integer, Integer>();
+    	
+    	for (int index = 0; index < numbers.length; index++) {
+    		if (remainders.contains(numbers[index]))
+    	}
+        
+    }
+	
+	
+}

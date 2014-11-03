@@ -1,0 +1,12 @@
+
+public class Solution {
+    public int firstMissingPositive(int[] A) {
+    	for (int index = 0; index < A.length; index++)
+    		if (A[index] >= 0 && A[index] < A.length) {
+    			int exchange = A[A[index]]; A[A[index]] = A[index]; A[index] = exchange; }
+    	for (int index = 1; index < A.length; index++)
+    		if (A[index] != index) return index;
+    	System.out.println(A);
+    	return A.length;
+    }
+}

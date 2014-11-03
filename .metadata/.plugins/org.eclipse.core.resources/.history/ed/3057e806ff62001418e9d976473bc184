@@ -1,0 +1,11 @@
+
+public class Solution {
+    public void merge(int A[], int m, int B[], int n) {
+    	int aPointer = 0, bPointer = 0;
+    	while (aPointer < m && bPointer < n) {
+    		if (A[aPointer + bPointer] > B[bPointer]) ;
+    		
+    		// A[aPointer + bPointer] vs. B[bPointer] .
+    	}
+    }
+}

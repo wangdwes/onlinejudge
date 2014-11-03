@@ -1,0 +1,9 @@
+
+public class Solution {
+    public int uniquePaths(int m, int n) {
+    	double number = 1;
+    	for (int k = 1; k <= n - 1; k++) number *= (m + n - 2 - (k - 1));
+    	for (int k = 1; k <= n - 1; k++) number /= k;
+    	return (int)(number); 
+    }
+}

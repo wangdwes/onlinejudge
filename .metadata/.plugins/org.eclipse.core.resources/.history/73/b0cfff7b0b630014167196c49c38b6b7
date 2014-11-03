@@ -1,0 +1,7 @@
+
+public class Solution {
+    public int sqrt(int x) {
+    	long result = 0;
+    	long bit = 1 << 30;
+    }
+}

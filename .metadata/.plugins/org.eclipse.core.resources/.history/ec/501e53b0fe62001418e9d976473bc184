@@ -1,0 +1,24 @@
+
+public class Solution {
+    public void merge(int A[], int m, int B[], int n) {
+    	int aPointer = 0, bPointer = 0;
+    	while (aPointer < m && bPointer < n) {
+    		// A[aPointer + bPointer] vs. B[bPointer] . 
+    		if (bPointer < n && A[aPointer + bPointer] >= B[bPointer]) {
+    			
+    		}
+    		while (aPointer < m && A[aPointer + bPointer] < B[bPointer]) aPointer++; 
+    		
+    		
+    		
+    		if (B[bPointer] > A[aPointer + bPointer] && (aPointer >= m || B[bPointer] > A[aPointer + bPointer + 1])) aPointer++;
+    		else {
+    			for (int index = m + n - 1; index >= aPointer + bPointer + 1; index--) A[index] = A[index - 1];
+    			if (A[aPointer + bPointer] <= B[bPointer] && (aPointer >= m || A[aPointer + bPointer + 1] > B[bPointer]))
+    				A[aPointer + bPointer + 1] = B[bPointer++];
+    			else if (A[aPointer + bPointer] >= B[bPointer])
+    				A[aPointer + bPointer] = B[bPointer++]; 
+    		}
+    	}
+    }
+}
