@@ -1,0 +1,19 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Solution {
+    public int trap(int[] A) {
+    	Deque<Integer> stack = new ArrayDeque<Integer>();
+    	int index = 0, amount = 0;
+    	while (index < A.length) {
+    		System.out.println(amount);
+    		if (stack.isEmpty() || A[index] < A[stack.peek()]) stack.push(index++);
+    		else amount += (A[index] - A[stack.pop()]) * (stack.isEmpty()? 0: index - 1 - stack.peek());
+    	}
+    	return amount;
+    }
+}
+
+// [0,1,0,2,1,0,1,3,2,1,2,1]
+
+// 0 

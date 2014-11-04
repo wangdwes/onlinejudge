@@ -3,35 +3,36 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="289" key="DIALOG_WIDTH"/>
 		<item value="230" key="DIALOG_Y_ORIGIN"/>
-		<item value="432" key="DIALOG_HEIGHT"/>
 		<item value="1069" key="DIALOG_X_ORIGIN"/>
+		<item value="432" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="A[index]" key="selection"/>
+		<item value="B_" key="selection"/>
 		<list key="findhistory">
+			<item value="B"/>
+			<item value="A"/>
 			<item value="value"/>
 			<item value="combination"/>
 			<item value="combinations"/>
 			<item value="TreeLinkNode"/>
 			<item value="postorder"/>
 			<item value="min"/>
-			<item value="seed"/>
-			<item value="bb"/>
 		</list>
 		<list key="replacehistory">
+			<item value="B_"/>
+			<item value="A_"/>
+			<item value="_A"/>
 			<item value="A[index]"/>
 			<item value="combo"/>
 			<item value="combos"/>
 			<item value="TreeNode"/>
 			<item value="preorder"/>
-			<item value="max"/>
-			<item value="lengths"/>
 		</list>
 	</section>
 </section>

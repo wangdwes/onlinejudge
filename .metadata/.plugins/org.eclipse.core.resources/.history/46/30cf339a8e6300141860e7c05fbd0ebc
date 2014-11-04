@@ -1,0 +1,10 @@
+
+public class Solution {
+    public int minPathSum(int[][] grid) {
+    	if (grid == null) return 0;
+    	if (grid.length == 0) return 0;
+    	
+    	int m = grid.length, n = grid[0].length;
+    	
+    }
+}

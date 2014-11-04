@@ -1,0 +1,23 @@
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Solution sol = new Solution();
+		
+		sol.LRUCache(2);
+		
+		sol.set(1, 20);
+		System.out.println(sol.get(1));
+		sol.set(2, 30);
+		System.out.println(sol.get(2));	
+		System.out.println(sol.get(-1));
+//		sol.set(3, 40);
+//		System.out.println(sol.get(2));		
+		
+		
+		
+	}
+
+}

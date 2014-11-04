@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;longest-substring-without-repeating-characters&apos;&#x0A;- Original project: &apos;minimum-window-substring&apos;&#x0A;- Destination element: &apos;longest-substring-without-repeating-characters&apos;&#x0A;- Original elements:&#x0A;     Launcher.java&#x0A;     Solution.java" description="Copy compilation units" destination="=longest-substring-without-repeating-characters" element1="/&lt;{Launcher.java" element2="/&lt;{Solution.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1415059698117" units="2" version="1.0"/>
+</session>

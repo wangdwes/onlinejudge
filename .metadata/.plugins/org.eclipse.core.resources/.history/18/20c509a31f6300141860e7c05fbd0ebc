@@ -1,0 +1,21 @@
+
+public class Solution {
+    public int numDecodings(String s) {
+    	int[] numberOfWays = new int[s.length()]; // or constant space would do as well.
+    	for (int index = 0; index < s.length(); index++) {
+    		if (index >= 1) {
+    			int value = Integer.valueOf(s.substring(index - 1, index)); 
+    			if (1 <= value && value <= 26) numberOfWays[index] += numberOfWays[index - 1]; }
+    		if (index >= 2) {
+    			int value = Integer.valueOf(s.substring(index - 2, index));
+    			if (1 <= value)
+    		}
+    		
+    		index, index - 1
+    		
+    		
+    		index, index - 2
+    	}
+    		
+    }
+}

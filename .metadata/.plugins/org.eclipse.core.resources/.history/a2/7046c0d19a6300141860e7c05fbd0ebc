@@ -1,0 +1,47 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Solution {
+    public int maximalRectangle(char[][] matrix) {
+    	if (matrix == null) return 0;
+    	if (matrix.length == 0) return 0;
+    
+    	int area = 0, maxArea = 0;
+    	Deque<Integer> stack = new ArrayDeque<Integer>();
+    	
+    	for (int row = 0, column; row < matrix.length; row++) {
+    		for (column = 0; column < matrix[row].length; column++) matrix[0];
+    		
+    		while (column < matrix[row].length || !stack.isEmpty()) {
+    			if (stack.isEmpty() || (column < matrix[row].length &&
+    				matrix[row][column] >= matrix[row][stack.peek()])) stack.push(column++);
+    			else { area = matrix[row][stack.pop()] * (stack.isEmpty()? column: column - 1 - stack.peek());
+    				maxArea = Math.max(maxArea, area); } }
+    	}
+    	
+    	return maxArea;
+    }
+}
+
+/*
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Solution {
+    public int largestRectangleArea(int[] height) {
+    	int area = 0, maxArea = 0;
+    	Deque<Integer> stack = new ArrayDeque<Integer>();
+    	
+    	int index = 0; 
+    	while (index < height.length || !stack.isEmpty()) {
+    		if (stack.isEmpty() || (index < height.length && height[index] >= height[stack.peek()])) stack.push(index++);
+    		else { area = height[stack.pop()] * (stack.isEmpty()? index: index - stack.peek() - 1); 
+    			maxArea = Math.max(maxArea, area); }
+    	}
+
+    	return maxArea;
+    }
+}
+
+*/

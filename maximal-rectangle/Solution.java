@@ -1,0 +1,29 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Solution {
+    public int maximalRectangle(char[][] matrix) {
+    	if (matrix == null) return 0;
+    	if (matrix.length == 0) return 0;
+    
+    	int area = 0, maxArea = 0;
+    	Deque<Integer> stack = new ArrayDeque<Integer>();
+    	
+    	for (int row = 0, column; row < matrix.length; row++) {
+    		for (column = 0; column < matrix[row].length; column++) {
+    			matrix[row][column] -= '0';
+    			if (matrix[row][column] != 0 && row > 0) 
+    				matrix[row][column] += matrix[row - 1][column];
+    		}
+    		
+    		column = 0; 
+    		while (column < matrix[row].length || !stack.isEmpty()) {
+    			if (stack.isEmpty() || (column < matrix[row].length &&
+    				matrix[row][column] >= matrix[row][stack.peek()])) stack.push(column++);
+    			else { area = matrix[row][stack.pop()] * (stack.isEmpty()? column: column - 1 - stack.peek());
+    				maxArea = Math.max(maxArea, area); } }
+    	}
+    	
+    	return maxArea;
+    }
+}

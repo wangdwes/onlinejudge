@@ -1,0 +1,13 @@
+
+public class Solution {
+    public void sortColors(int[] A) {
+    	int pointer0 = 0, pointer = 0, pointer2 = A.length - 1;
+    	while (pointer < A.length) {
+    		if (A[pointer] == 2) {
+    			A[pointer] = A[pointer2]; A[pointer2--] = 2; }
+    		else if (A[pointer] == 0 && pointer0 < A.length) {
+    			A[pointer] = A[pointer0]; A[pointer0++] = 0; }
+    		else pointer++;
+    	}
+    }
+}

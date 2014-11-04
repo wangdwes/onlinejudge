@@ -1,0 +1,13 @@
+
+public class Solution {
+	
+    public int searchInsert(int[] A, int target) {
+    
+    	int left = 0, right = A.length, middle = 0;
+    	while (left < right) { middle = (right - left) / 2;
+    		if (A[(right - left) / 2] < target) left = (right - left) / 2;
+    		
+    	}
+    	
+    }
+}

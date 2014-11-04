@@ -1,0 +1,6 @@
+
+public class Solution {
+    public int numDecodings(String s) {
+    	int[] numberOfWays = new int[s.length()]; // or constant space would do as well.
+    }
+}

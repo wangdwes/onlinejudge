@@ -1,0 +1,11 @@
+
+public class Solution {
+    public int maxSubArray(int[] A) {
+    	
+    	int maximum = A[0]; 
+        for (int index = 0; index < A.length; index++) {
+        	
+        	
+        }
+    }
+}

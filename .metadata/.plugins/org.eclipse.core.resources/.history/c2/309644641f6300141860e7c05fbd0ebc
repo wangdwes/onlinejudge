@@ -1,0 +1,16 @@
+
+public class Solution {
+    public int numDecodings(String s) {
+    	int[] numberOfWays = new int[s.length()]; // or constant space would do as well.
+    	for (int index = 0; index < s.length(); index++) {
+    		if (index > 1) { int     		
+    		Integer.valueOf(s.substring(index - 1, index))
+    		
+    		index, index - 1
+    		
+    		
+    		index, index - 2
+    	}
+    		
+    }
+}

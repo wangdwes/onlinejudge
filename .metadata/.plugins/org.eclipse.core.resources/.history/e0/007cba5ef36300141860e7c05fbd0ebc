@@ -1,0 +1,55 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+public class LRUCache {
+
+	public class ListNode {
+		ListNode previous, next;
+		Integer value, key; }
+
+	public int capacity_; 
+	
+	
+	public int capacity_;	
+	public List<ListNode> list;
+	public Map<Integer, Iterator<ListNode>> map;
+	
+    public LRUCache(int capacity) { capacity_ = capacity; }
+    
+    public int get(int key) {
+    	if (!map.containsKey(key)) return -1;
+    	else { map.put(key, value);
+    	
+    	
+    	if (!map.containsKey(key)) return -1; 
+    	else return moveToHead(map.get(key)).value;
+    }
+    
+    public void set(int key, int value) {
+        if (!map.containsKey(key)) {
+        	if (map.size() >= capacity_) {
+        		map.remove(head.previous.key);
+        		head.previous.value = value;
+        		head.previous.key = key;
+        		map.put(key, head.previous); }
+        	else {
+        		ListNode node = new ListNode();
+        		node.key = key; node.value = value;
+        		map.put(key, node);
+        		if (head == null) {
+        			node.next = node;
+        			node.previous = node;
+        			head = node;        		
+        		} else {
+        			node.previous = head.previous;        			
+        			node.next = head;        			
+        			head.previous.next = node;
+        			head.previous = node;   
+        			head = node;
+        		}
+        	}
+        } else moveToHead(map.get(key)).value = value;
+    }
+}

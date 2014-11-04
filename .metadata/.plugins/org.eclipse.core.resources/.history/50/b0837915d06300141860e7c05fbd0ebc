@@ -1,0 +1,12 @@
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		
+		Solution sol = new Solution();
+		
+		System.out.println(sol.findMedianSortedArrays(new int[]{1}, new int[]{}));
+		
+	}
+	
+}

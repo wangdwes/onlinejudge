@@ -1,0 +1,12 @@
+
+public class Solution {
+    public String simplifyPath(String path) {
+    	for (int index = 0, slash; index >= 0 && index < path.length(); index = slash) {
+    		while (index < path.length() && path.charAt(index) == '/') index++;
+    		slash = path.indexOf('/', index); if (slash == -1) slash = path.length()
+    		String token = path.substring(index, slash);
+    		System.out.println(token);
+    	}
+    	return null;
+    }
+}

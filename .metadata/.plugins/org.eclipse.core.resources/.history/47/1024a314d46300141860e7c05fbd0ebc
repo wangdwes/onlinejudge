@@ -1,0 +1,20 @@
+
+public class Solution {
+	
+    public double findMedianSortedArrays(int A[], int B[]) {
+    	if (A.length > B.length) return findMedianSortedArrays(B, A);
+    	
+    	int l = A.length, m = B.length, k = (l + m - 1) / 2;
+    	int left = Math.max(0, k - m), right = Math.min(l, k);
+    	while (left < right) {
+    		int i = (left + right) / 2, j = k - i;
+    		if (j > k || A[i] < B[j]) left = i + 1; else right = i; }
+    	
+    	int a = Math.max(left > 0? A[left - 1]: Integer.MIN_VALUE, k > 0? B[k - 1]: Integer.MIN_VALUE);
+    	if ((l + m) % 2 == 1) return (double)a;
+    	
+    	int b = Math.min(left < l? A[left]: Integer.MAX_VALUE, k - left + 1 < m? B[k - left + 1]: Integer.MAX_VALUE);
+    	return (a + b) / 2.0;
+    	
+    }	
+}

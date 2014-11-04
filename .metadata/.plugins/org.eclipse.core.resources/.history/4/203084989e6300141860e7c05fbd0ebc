@@ -1,0 +1,15 @@
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a = (int)0.5;
+		System.out.println(a);
+		
+		Solution sol = new Solution();
+		System.out.println(sol.searchInsert(new int[]{1},0));
+		
+	}
+
+}

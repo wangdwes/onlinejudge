@@ -1,0 +1,11 @@
+
+public class Solution {
+	
+	public double medianSearch(int A[], int B[], int left, int right) {
+		
+	}
+	
+    public double findMedianSortedArrays(int A[], int B[]) {
+    	
+    }	
+}

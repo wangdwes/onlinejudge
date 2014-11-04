@@ -1,0 +1,12 @@
+
+public class Solution {
+	
+	public double medianSearch(int A[], int B[], int left, int right) {
+		int i = (left + right) / 2;
+		
+	}
+	
+    public double findMedianSortedArrays(int A[], int B[]) {
+    	
+    }	
+}

@@ -1,0 +1,16 @@
+
+public class Solution {
+    public int lengthOfLongestSubstring(String s) {
+    	
+    	// http://leetcode.com/2010/11/finding-minimum-window-in-s-which.html
+    	// cheating a little bit? since we don't know about the character set.
+    	int[] hasFound = new int[256]; int count = 0, max = 0; 
+    	
+    	for (int begin = 0, end = 0; end < s.length(); end++) {
+    		if (++hasFound[s.charAt(end)] <= 1) count++;
+    		else { max = Math.max(max, count); count = 0;
+    			while (begin <= end) hasFound[s.charAt(begin)]--; } }
+    	
+    	return max;
+    }
+}

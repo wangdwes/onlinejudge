@@ -1,0 +1,17 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Solution {
+    public int largestRectangleArea(int[] height) {
+    	int area = 0, maxArea = 0;
+    	Deque<Integer> stack = new ArrayDeque<Integer>();
+    	int index = 0; while (index < height.length) {
+    		if (stack.isEmpty() || height[index] >= height[stack.peek()])
+    			stack.push(index++);
+    		else {
+    			area = height[]
+    			
+    		}
+    	}
+    }
+}

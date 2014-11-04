@@ -1,0 +1,18 @@
+
+public class Solution {
+	
+	public int[] A_, B_;
+	
+	public double medianSearch(int A[], int B[], int left, int right) {
+		int i = (left + right) / 2, j = (A.length + B.length + 1) / 2 - i;
+		if ((j == 0 || A[i] > B[j]) && (j == B.length || A[i] <= B[j + 1])) return A[i];
+		else { if ((j == 0 || A[i] > B[j]) && j != m && A[i] > B[j + 1])
+			return medianSearch(A, B)
+		}
+			
+	}
+	
+    public double findMedianSortedArrays(int A[], int B[]) {
+    	
+    }	
+}
